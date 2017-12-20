@@ -1,4 +1,4 @@
-**Forked from [haugene/docker-transmission-openvpn](https://github.com/haugene/docker-transmission-openvpn) to create an automated ARMhf build on Dockerhub**
+**Forked from [haugene/docker-transmission-openvpn](https://github.com/haugene/docker-transmission-openvpn) to create an automated ARMhf build on Dockerhub, using [Resin's debian base image](https://hub.docker.com/r/resin/armv7hf-debian/) with a static QEMU binary**
 
 **Might not be updated in the future**
 
