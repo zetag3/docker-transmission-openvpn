@@ -1,8 +1,11 @@
-FROM resin/rpi-raspbian:jessie
-MAINTAINER Kristian Haugene
+FROM resin/armv7hf-debian:jessie
+MAINTAINER LedoKun
 
 VOLUME /data
 VOLUME /config
+
+# Build the image on Dockerhub
+RUN [ "cross-build-start" ]
 
 # Update packages and install software
 RUN apt-get update \
@@ -21,6 +24,8 @@ RUN apt-get update \
     && groupmod -g 1000 users \
     && useradd -u 911 -U -d /config -s /bin/false abc \
     && usermod -G users abc
+
+RUN [ "cross-build-end" ]
 
 # Add configuration and scripts
 ADD openvpn/ /etc/openvpn/

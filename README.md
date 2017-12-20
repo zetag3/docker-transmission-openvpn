@@ -1,3 +1,7 @@
+**Forked from [haugene/docker-transmission-openvpn](https://github.com/haugene/docker-transmission-openvpn) to create an automated ARMhf build on Dockerhub**
+
+**Might not be updated in the future**
+
 # Transmission with WebUI and OpenVPN
 Docker container running Transmission torrent client with WebUI while connecting to OpenVPN.
 It bundles certificates and configurations for a bunch of VPN providers and if you're using PIA as provider it will update Transmission hourly with assigned open port. Please read the instructions below, and read it again before posting an issue :)
@@ -274,8 +278,8 @@ nameserver 8.8.8.8
 nameserver 8.8.4.4
 ```
 - Save the file with [escape] + `:wq!`
-- Create your docker container with a the following command line: 
- 
+- Create your docker container with a the following command line:
+
       # Tested on DSM 6.1.4-15217 Update 1, Docker Package 17.05.0-0349
       docker run \
           --cap-add=NET_ADMIN \
